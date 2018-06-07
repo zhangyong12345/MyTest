@@ -1,0 +1,18 @@
+{
+    "env": "development",
+    "port": 3000,
+    "sessionkey": "rioe",
+    "secret": "my-secret",
+    "jwt": {},
+    "bookshelf": {
+        "client": "mysql",
+        "connection": {
+            "host":"10.1.40.220",
+            "port": "3308",
+            "user":"root",
+            "password":"mysql",
+            "database":"jmssj", 
+            "charset": "utf8"
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "verbose": true,
+    "restartable": "rs",
+    "execMap": {
+        "js": "node --harmony"
+    },
+    "events": {
+        "restart": "echo 'display notification \"App restarted due to:\n'$FILENAME'\" with title \"nodemon\"'"
+    },
+    "watch": [
+        "config",
+        "src/**/*.ts",
+        "lib/**/*.ts"
+    ],
+    "ignore": [
+        ".git",
+        "node_modules",
+        "src/**/*.spec.ts"
+    ],
+    "env": {
+        "NODE_ENV": "development"
+    },
+    "exec": "ts-node ./src/app.ts",
+    "ext": "ts js json"
+}

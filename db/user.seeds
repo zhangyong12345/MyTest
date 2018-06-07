@@ -1,0 +1,9 @@
+const usersData = require('../../../data/user.json');
+
+exports.seed = function(knex, Promise) {
+  return knex('user').del()
+  .then(() => {
+    knex('user').insert(usersData);
+  });
+};
+

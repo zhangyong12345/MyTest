@@ -1,0 +1,45 @@
+import authAPI from './auth';
+import menuAPI from './menu';
+import userAPI from './user';
+import roleAPI from './role';
+import groupAPI from './group';
+import divisionAPI from './division';
+import dictionary_categoryAPI from './dictionary-category';
+import dictionaryAPI from './dictionary';
+import enterprisesAPI from './enterprises';
+import org_enterprisesAPI from './org-enterprises';
+import exception_dataAPI from './exception-enterprises';
+import matter_enterprisesAPI from './matter-enterprises';
+import mattersAPI from './matters';
+import base_dataAPI from './base-data';
+import agencyAPI from './agency';
+import sectionAPI from './section';
+import inspectorAPI from './inspector';
+import agencyAPI1 from './agency1';
+import sectionAPI1 from './section1';
+import dictionaryAPI1 from './dictionary1';
+import dictionary_categoryAPI1 from './dictionary-category1';
+
+export default (app) => {
+  app.use(authAPI.routes(), authAPI.allowedMethods());
+  app.use(menuAPI.routes(), menuAPI.allowedMethods());
+  app.use(userAPI.routes(), userAPI.allowedMethods());
+  app.use(roleAPI.routes(), roleAPI.allowedMethods());
+  app.use(groupAPI.routes(), groupAPI.allowedMethods());
+  app.use(divisionAPI.routes(), divisionAPI.allowedMethods());
+  app.use(dictionary_categoryAPI.routes(), dictionary_categoryAPI.allowedMethods());
+  app.use(dictionaryAPI.routes(), dictionaryAPI.allowedMethods());
+  app.use(enterprisesAPI.routes(), enterprisesAPI.allowedMethods());
+  app.use(org_enterprisesAPI.routes(), org_enterprisesAPI.allowedMethods());
+  app.use(exception_dataAPI.routes(), exception_dataAPI.allowedMethods());
+  app.use(matter_enterprisesAPI.routes(), matter_enterprisesAPI.allowedMethods());
+  app.use(mattersAPI.routes(), mattersAPI.allowedMethods());
+  app.use(base_dataAPI.routes(), base_dataAPI.allowedMethods());
+  app.use(agencyAPI.routes(), agencyAPI.allowedMethods());
+  app.use(sectionAPI.routes(), sectionAPI.allowedMethods());
+  app.use(inspectorAPI.routes(), inspectorAPI.allowedMethods());
+  app.use(agencyAPI1.routes(), agencyAPI1.allowedMethods());
+  app.use(sectionAPI1.routes(), sectionAPI1.allowedMethods());
+  app.use(dictionaryAPI1.routes(), dictionaryAPI1.allowedMethods());
+  app.use(dictionary_categoryAPI1.routes(), dictionary_categoryAPI1.allowedMethods());
+}

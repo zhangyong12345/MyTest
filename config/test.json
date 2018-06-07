@@ -1,0 +1,33 @@
+{
+    "env": "test",
+    "port": 3000,
+    "sessionkey": "koa-demo",
+    "redis": {
+        "port": 6479,
+        "host": "10.1.40.220",
+        "db": 8
+    },
+    "sqlite3": {
+        "url": "./db/fs.db",
+        "schema": {
+            "file" : "./src/script/schema.sql"
+        },
+        "populate": {
+            "file" : "./src/script/data.sql"
+        },
+        "setup": false
+    },
+    "bookshelf": {
+        "client": "sqlite3",
+        "connection": {
+            "filename": "./db/data.db"
+        },
+        "migrate": false,
+        "migrations": {
+            "directory": "./db/migrations"
+        },
+        "seeds": {
+            "directory": "./db/seeds"
+        }
+    }
+}

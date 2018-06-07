@@ -1,0 +1,33 @@
+version: '2'
+
+services:
+  web:
+    image: keymetrics/pm2:latest-alpine
+    command: npm run docker
+    working_dir: /usr/src/app
+    environment:
+      - NODE_ENV="development"
+    ports:
+      - "3010:3000"
+    volumes:
+      - ./web:/usr/src/app
+    depends_on:
+      - mongo
+    links:
+      - mongo:mongo
+    restart: always
+  mongo:
+    image: mongo:3.4
+    volumes:
+      - ./mongo:/data/db
+  web2:
+    image: node:8.10-alpine
+    command: npm run docker
+    working_dir: /usr/src/app
+    environment:
+      - NODE_ENV="development"
+    ports:
+      - "3020:3000"
+    volumes:
+      - ./web:/usr/src/app
+    restart: always

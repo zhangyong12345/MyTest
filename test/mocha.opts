@@ -1,0 +1,4 @@
+  -t 5000
+  --recursive
+  --reporter spec
+  --ui bdd
